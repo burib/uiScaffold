@@ -9,7 +9,7 @@ Supports the followings:
   - [x] Concatenation js files into a single file.
   - [x] seperate js 3rd party vendor files from app files.
   - [x] checkStyle support for js based on [http://jscs.info/](http://jscs.info/)
-  - [x] TODO
+  - [ ] jshint check 
 
 
 prerequisites:
