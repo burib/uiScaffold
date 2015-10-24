@@ -1,0 +1,62 @@
+{
+  "name": "uiTurtle",
+  "version": "0.0.0",
+  "description": "uiTurtle",
+  "main": "index.js",
+  "author": "Balazs Buri <info@burib.net>",
+  "lisence": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "licenses": [],
+  "scripts": {
+    "postinstall": "node node_modules/.bin/bower install --d",
+    "start": "node node_modules/.bin/webpack-dev-server --content-base src/ --hot --port 1337 --inline --devtool eval --progress --colors",
+    "dist": "node node_modules/grunt-cli/bin/grunt default",
+    "test": "karma start --singleRun false",
+    "testOnce": "karma start",
+    "checkStyle": "node ./node_modules/jscs/bin/jscs ./src/*.js --config=./js-styleguide.jscsrc"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.5",
+    "autoprefixer-loader": "^3.1.0",
+    "babel-core": "^4.7.16",
+    "babel-loader": "^4.2.0",
+    "bower": "^1.5.2",
+    "css-loader": "^0.9.1",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.6.0",
+    "extract-text-webpack-plugin": "^0.5.0",
+    "file-loader": "^0.8.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-webpack": "^1.0.8",
+    "html-loader": "^0.3.0",
+    "istanbul-instrumenter-loader": "^0.1.3",
+    "jasmine-core": "^2.3.4",
+    "jscs": "^2.3.4",
+    "json-loader": "^0.5.2",
+    "karma": "0.13.9",
+    "karma-coverage": "^0.5.1",
+    "karma-jasmine": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-webpack": "1.7.0",
+    "node-sass": "^3.0.0-beta.4",
+    "phantomjs": "^1.9.8",
+    "sass-loader": "^1.0.0",
+    "url-loader": "^0.5.5",
+    "webpack": "1.12.2",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "angular": "1.4.4",
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4.0"
+  },
+  "browser": {
+    "vendor": "./vendor/index.js"
+  }
+}
