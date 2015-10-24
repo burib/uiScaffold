@@ -7,6 +7,7 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
       imgFileLoader = 'file?name=assets/img/[name]-[hash].[ext]';
 
   return {
+    storeStatsTo: 'webpackStatistics',
     context: __dirname + '/src',
     entry: {
       vendor: './../vendor/index.js',
@@ -17,17 +18,17 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
       filename: 'assets/js/' + appJsFilename
     },
     resolve: {
-      root: [path.join(__dirname, "bower_components"), path.join(__dirname, "node_modules")]
+      root: [path.join(__dirname, 'bower_components'), path.join(__dirname, 'node_modules')]
     },
     module: {
       loaders: [
         {test: /\.json$/, loader: 'json', include: path.resolve(__dirname, 'src')},
-        {test: /\.(css$|scss)/, loader: ExtractTextPlugin.extract('css!autoprefixer!sass', { publicPath: '../../'})},
+        {test: /\.(css$|scss)/, loader: ExtractTextPlugin.extract('css!autoprefixer!sass', {publicPath: '../../'})},
         {test: /\.js$/, loader: 'babel', include: path.resolve(__dirname, 'src')},
         {test: /.*\.(gif|png|jpe?g|ico)$/i, loader: imgFileLoader},
         {test: /\.html$/, loader: 'html'},
         {test: /\.(otf|eot|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: fontFileLoader},
-        {test: /[\/]angular\.js$/, loader: "exports?angular"}
+        {test: /[\/]angular\.js$/, loader: 'exports?angular'}
       ],
       postLoaders: [
         {
@@ -47,7 +48,7 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
           '[absolute-resource-path]', '[absolute-resource-path]'
       ),
       new webpack.ResolverPlugin(
-          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
       ),
       new webpack.DefinePlugin({
         __APP_ENV__: process.env.APP_ENV
@@ -57,7 +58,7 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
     devServer: {
       historyApiFallback: true
     }
-  }
+  };
 }
 
 module.exports = getWebpackConfig('vendor-[hash].js', 'app-[hash].js', 'app-[hash].css');
