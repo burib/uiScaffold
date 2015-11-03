@@ -2,12 +2,11 @@ var path = require('path'),
     webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
+module.exports = function (vendorJsFilename, appJsFilename, appCssFilename) {
   var fontFileLoader = 'file?name=assets/font/[name]-[hash].[ext]',
       imgFileLoader = 'file?name=assets/img/[name]-[hash].[ext]';
 
   return {
-    storeStatsTo: 'webpackStatistics',
     context: __dirname + '/src',
     entry: {
       vendor: './../vendor/index.js',
@@ -18,17 +17,17 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
       filename: 'assets/js/' + appJsFilename
     },
     resolve: {
-      root: [path.join(__dirname, 'bower_components'), path.join(__dirname, 'node_modules')]
+      root: [path.join(__dirname, "bower_components"), path.join(__dirname, "node_modules")]
     },
     module: {
       loaders: [
         {test: /\.json$/, loader: 'json', include: path.resolve(__dirname, 'src')},
-        {test: /\.(css$|scss)/, loader: ExtractTextPlugin.extract('css!autoprefixer!sass', {publicPath: '../../'})},
+        {test: /\.(css$|scss)/, loader: ExtractTextPlugin.extract('css!autoprefixer!sass', { publicPath: '../../'})},
         {test: /\.js$/, loader: 'babel', include: path.resolve(__dirname, 'src')},
         {test: /.*\.(gif|png|jpe?g|ico)$/i, loader: imgFileLoader},
         {test: /\.html$/, loader: 'html'},
         {test: /\.(otf|eot|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: fontFileLoader},
-        {test: /[\/]angular\.js$/, loader: 'exports?angular'}
+        {test: /[\/]angular\.js$/, loader: "exports?angular"}
       ],
       postLoaders: [
         {
@@ -48,17 +47,15 @@ function getWebpackConfig(vendorJsFilename, appJsFilename, appCssFilename) {
           '[absolute-resource-path]', '[absolute-resource-path]'
       ),
       new webpack.ResolverPlugin(
-          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+          new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
       ),
       new webpack.DefinePlugin({
+        __USE_MOCKS__: process.env.USE_MOCKS,
         __APP_ENV__: process.env.APP_ENV
-      }),
-      new webpack.optimize.UglifyJsPlugin({mangle: false})
+      })
     ],
     devServer: {
       historyApiFallback: true
     }
-  };
-}
-
-module.exports = getWebpackConfig('vendor-[hash].js', 'app-[hash].js', 'app-[hash].css');
+  }
+};

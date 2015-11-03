@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.config.js');
+var webpackProduction = require('./webpack.prod.config.js');
 
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -7,18 +7,18 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         clean: {
-            production: [webpackConfig.output.path]
+            production: [webpackProduction.output.path]
         },
         copy: {
             production: {
                 files: [
                     {
                         src: 'src/index.html',
-                        dest: webpackConfig.output.path + 'index.html'
+                        dest: webpackProduction.output.path + 'index.html'
                     },
                     {
                         src: 'src/favicon.ico',
-                        dest: webpackConfig.output.path + 'favicon.ico'
+                        dest: webpackProduction.output.path + 'favicon.ico'
                     }
                 ],
                 options: {
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             }
         },
         webpack: {
-            production: webpackConfig
+            production: webpackProduction
         }
     });
 
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         return content.replace(/(=".*-)(hash)(\..*")/g, replaceWithCompileHash);
 
         function replaceWithCompileHash(match, prefix, hash, sufix) {
-            return prefix + grunt.template.process('<%=' + webpackConfig.storeStatsTo + '.hash%>') + sufix;
+            return prefix + grunt.template.process('<%=' + webpackProduction.storeStatsTo + '.hash%>') + sufix;
         }
     }
 };
