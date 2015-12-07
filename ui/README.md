@@ -1,4 +1,4 @@
-# uiTurtle
+# [uiScaffold](https://github.com/burib/uiScaffold/) by [@burib](https://github.com/burib/)
 scaffold project for angular based heavy enterprise application
 
 Supports the followings:
