@@ -1,5 +1,5 @@
 # [uiScaffold](https://github.com/burib/uiScaffold/)
-### angular webpack es5/es6 project base by [@burib](https://github.com/burib/)
+### angular webpack es5/es6 enterprise ready project base by [@burib](https://github.com/burib/)
 scaffold project for angular based heavy enterprise application
 
 Supports the followings:
