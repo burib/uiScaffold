@@ -6,7 +6,7 @@
     ├── Gruntfile.js            
     ├── README.md
     ├── bower.json
-    ├── js-styleguide.jscsrc                    # javascript styleguide
+    ├── js-styleguide.jscsrc                    # javascript styleguide rules description
     ├── karma.conf.js
     ├── package.json                            # project description, build scripts, npm dependencies
     ├── src
