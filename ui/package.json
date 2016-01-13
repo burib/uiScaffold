@@ -1,13 +1,13 @@
 {
-  "name": "uiTurtle",
+  "name": "uiScaffold",
   "version": "0.0.0",
-  "description": "uiTurtle",
+  "description": "javascript scaffolding project",
   "main": "index.js",
   "author": "Balazs Buri <info@burib.net>",
   "lisence": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/burib/uiScaffold"
   },
   "licenses": [],
   "scripts": {
