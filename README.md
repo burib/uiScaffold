@@ -6,18 +6,18 @@
     ├── Gruntfile.js            
     ├── README.md
     ├── bower.json
-    ├── js-styleguide.jscsrc
+    ├── js-styleguide.jscsrc                    # javascript styleguide
     ├── karma.conf.js
-    ├── package.json
+    ├── package.json                            # project description, build scripts, npm dependencies
     ├── src
     │   ├── favicon.ico
     │   ├── index.html
-    │   ├── index.js
-    │   ├── index.scss
+    │   ├── index.js                            # main entry of the whole application, everything starts here.
+    │   ├── index.scss                          
     │   ├── tests.js
     │   └── todo                                # todo module
-    │       ├── todo-data-service.js            # this service communicates with the REST API and returns data
-    │       ├── todo-data-service.spec.js       
+    │       ├── todo-data-service.js            # communicates with REST API and returns data
+    │       ├── todo-data-service.spec.js       # unit test for the DATA service
     │       ├── todo-directive.js               
     │       ├── todo-module.js
     │       ├── todo.scss                       
