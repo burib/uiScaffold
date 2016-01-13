@@ -6,7 +6,7 @@
     ├── Gruntfile.js            
     ├── bower.json                              # bower dependencies in case if you don't have it on npm.
     ├── js-styleguide.jscsrc                    # javascript styleguide rules description
-    ├── karma.conf.js
+    ├── karma.conf.js                           # config that defines who the unit tests get executed
     ├── package.json                            # project description, build scripts, npm dependencies
     ├── dist                                    # place of production files. Copy the content of this folder after successful build.
     ├── src
