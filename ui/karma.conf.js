@@ -38,7 +38,7 @@ module.exports = function(config) {
     colors: true,
     coverageReporter: {
       type: 'lcov',
-      dir: '../../_coverage/',
+      dir: '_coverage/',
       instrumenterOptions: {
         istanbul: {noCompact: true}
       },
