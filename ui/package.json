@@ -18,6 +18,12 @@
     "testOnce": "karma start",
     "checkStyle": "node ./node_modules/jscs/bin/jscs ./src/*.js --config=./js-styleguide.jscsrc"
   },
+  "dependencies": {
+    "angular": "1.4.8",
+    "angular-route": "1.4.8",
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4.0"
+  },
   "devDependencies": {
     "angular-mocks": "^1.4.5",
     "autoprefixer-loader": "^3.1.0",
@@ -50,11 +56,6 @@
     "url-loader": "^0.5.5",
     "webpack": "1.12.2",
     "webpack-dev-server": "^1.10.1"
-  },
-  "dependencies": {
-    "angular": "1.4.7",
-    "bootstrap": "^3.3.5",
-    "font-awesome": "^4.4.0"
   },
   "browser": {
     "vendor": "./vendor/index.js"

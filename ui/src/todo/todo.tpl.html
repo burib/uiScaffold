@@ -1,3 +1,11 @@
-module.exports = function() {
-  return {};
-};
+<div class="todo-panel-container">
+  <div class="todo-panel">
+    <h3>Todos: <small>{{todoCtrl.todoItems.length}}</small></h3>
+    <ul>
+      <li ng-repeat="item in todoCtrl.todoItems" ng-class="{'is-complete': item.isComplete}" class="todo-list-item">
+        <input type="checkbox" ng-bind="item.isComplete" ng-checked="item.isComplete" />
+        {{item.title}}
+      </li>
+    </ul>
+  </div>
+</div>
