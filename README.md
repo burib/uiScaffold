@@ -8,7 +8,7 @@
     ├── js-styleguide.jscsrc                    # javascript styleguide rules description
     ├── karma.conf.js                           # config that defines who the unit tests get executed
     ├── package.json                            # project description, build scripts, npm dependencies
-    ├── dist                                    # place of production files. Copy the content of this folder after successful build.
+    ├── dist                                    # place of production files. Copy the content of this folder
     ├── dist                                      after successful build.
     ├── src
     │   ├── index.html                          # main entry of the webpage.
