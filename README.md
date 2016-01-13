@@ -23,7 +23,7 @@
     │       ├── todo.scss                       # css files for the todo module.
     │       └── todo.tpl.html                   # template file of the <todo><todo> directive.
     ├── vendor
-    │   ├── index.js                            # main entry for vendor files. ( import angular, import jquery, etc )
+    │   ├── index.js                            # main entry for vendor files. ( import angular, jquery, etc )
     │   └── tests-common.js                     # helper utilities for writing unit tests
     ├── webpack.base.config.js                  # webpack configuration for the devServer.
     ├── webpack.config.js                   
