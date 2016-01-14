@@ -11,7 +11,7 @@ angular.module('app', [
       .when('/todo', {
         template: '<todo><todo>',
         title: 'List of Todos'
-      })
+      });
   })
   .config(function($locationProvider) {
     // This sets the url mode to html5 clean URLs.

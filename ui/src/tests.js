@@ -1,1 +1,1 @@
-require('./../vendor/tests-common.js'); //Only for tests
+require('./../vendor/tests-common.js'); // Only for tests
