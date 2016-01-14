@@ -38,7 +38,7 @@ scaffold project for angular based heavy enterprise application
     ├── karma.conf.js                           # config that defines who the unit tests get executed
     ├── package.json                            # project description, build scripts, npm dependencies
     ├── dist                                    # place of production files. Copy the content of this folder
-    ├                                             after successful build.
+    |                                             after successful build.
     ├── src
     │   ├── index.html                          # main entry of the webpage.
     │   ├── index.js                            # main entry of the whole application, everything starts here.
