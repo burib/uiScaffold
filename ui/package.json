@@ -11,12 +11,12 @@
   },
   "licenses": [],
   "scripts": {
-    "postinstall": "node node_modules/.bin/bower install --d",
-    "start": "node node_modules/.bin/webpack-dev-server --content-base src/ --hot --port 1337 --inline --devtool eval --progress --colors",
-    "dist": "node node_modules/grunt-cli/bin/grunt default",
+    "postinstall": "bower install --d",
+    "start": "webpack-dev-server --content-base src/ --hot --port 1337 --inline --devtool eval --progress --colors",
+    "dist": "grunt default",
     "test": "karma start --singleRun false",
     "testOnce": "karma start",
-    "checkStyle": "node ./node_modules/jscs/bin/jscs ./src/*.js --config=./js-styleguide.jscsrc"
+    "checkStyle": "jscs ./src/*.js --config=./js-styleguide.jscsrc"
   },
   "dependencies": {
     "angular": "1.4.8",
