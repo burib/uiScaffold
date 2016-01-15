@@ -5,12 +5,28 @@
 .todo-panel {
   background-color: #f5e79e;
   padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.todo-list-items-container {
+  margin: 0;
+  padding: 0;
 }
 
 .todo-list-item {
   list-style-type: none;
+  color: #000;
+  margin: 0;
 }
 
-.todo-list-item {
-  list-style-type: none;
+.todo-list-item:after {
+  clear: both;
+}
+
+.todo-list-item.is-complete {
+  color: #8d8d8d;
+}
+
+.todo-list-item.is-complete .todo-list-item-title {
+  text-decoration: line-through;
 }

@@ -1,16 +1,14 @@
-module.exports = function() {
+module.exports = function(todoDataService) {
   var vm = this;
 
-  vm.todoItems = [
-    {
-      'title': 'buy milk',
-      'isComplete': false
-    },
-    {
-      'title': 'drink coffee',
-      'isComplete': true
-    }
-  ];
+  todoDataService.getItems().then(function(items) {
+    vm.items = items;
+  });
+
+  vm.changeStatus = function(item) {
+    item.isComplete = !item.isComplete;
+    todoDataService.updateItem(item);
+  };
 
   return vm;
 };
