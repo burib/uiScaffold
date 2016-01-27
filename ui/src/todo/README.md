@@ -7,5 +7,5 @@ you can find a very simple one here:
 [https://github.com/burib/todoRestServer](https://github.com/burib/todoRestServer)
 
 
-## the sample app is still workin progress.
+## the sample app is still work in progress.
 
