@@ -1,14 +1,8 @@
 export default function(todoDataService) {
-  var vm = this;
+  todoDataService.getItems().then(items=> this.items = items);
 
-  todoDataService.getItems().then(function(items) {
-    vm.items = items;
-  });
-
-  vm.changeStatus = function(item) {
+  this.changeStatus = function(item) {
     item.isComplete = !item.isComplete;
     todoDataService.updateItem(item);
   };
-
-  return vm;
 };
