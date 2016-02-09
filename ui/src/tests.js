@@ -1,1 +1,1 @@
-require('./../vendor/tests-common.js'); // Only for tests
+import testsCommonModule from './../vendor/tests-common.js'; // Only for tests

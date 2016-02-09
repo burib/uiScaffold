@@ -1,4 +1,4 @@
-module.exports = function($http) {
+export default function($http) {
   var url = 'http://localhost:8080/api/items';
 
   return {

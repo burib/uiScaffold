@@ -1,5 +1,8 @@
-require('./todo.scss');
+import './todo.scss';
 
-module.exports = angular.module('todo', [])
-  .directive('todo', require('./todo-directive'))
-  .factory('todoDataService', require('./todo-data-service'));
+import todoDirective from './todo-directive';
+import todoDataService from './todo-data-service';
+
+export default angular.module('todo', [])
+  .directive('todo', todoDirective)
+  .factory('todoDataService', todoDataService);

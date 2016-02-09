@@ -1,10 +1,12 @@
-require('font-awesome/css/font-awesome.css');
-require('bootstrap/dist/css/bootstrap.css');
-require('./index.scss'); // global css variables and rules for the whole app
+import 'font-awesome/css/font-awesome.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.scss'; // global css variables and rules for the whole app
+
+import todoModule from './todo/todo-module';
 
 angular.module('app', [
   'ngRoute',
-  require('./todo/todo-module').name
+  todoModule.name
 ])
   .config(function($routeProvider) {
     $routeProvider

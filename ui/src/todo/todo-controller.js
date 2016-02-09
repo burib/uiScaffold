@@ -1,4 +1,4 @@
-module.exports = function(todoDataService) {
+export default function(todoDataService) {
   var vm = this;
 
   todoDataService.getItems().then(function(items) {
