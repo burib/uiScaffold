@@ -51,7 +51,8 @@ module.exports = function (vendorJsFilename, appJsFilename, appCssFilename) {
       ),
       new webpack.DefinePlugin({
         __USE_MOCKS__: process.env.USE_MOCKS,
-        __APP_ENV__: process.env.APP_ENV
+        __APP_ENV__: process.env.APP_ENV,
+        angular: 'angular'
       })
     ],
     devServer: {
