@@ -1,2 +1,2 @@
-require('angular');
-require('angular-route/angular-route.min.js');
+import angular from 'angular';
+import ngRoute from 'angular-route/angular-route.min.js';
