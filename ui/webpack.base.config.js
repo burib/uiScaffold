@@ -26,8 +26,7 @@ module.exports = function (vendorJsFilename, appJsFilename, appCssFilename) {
         {test: /\.js$/, loader: 'babel', include: path.resolve(__dirname, 'src')},
         {test: /.*\.(gif|png|jpe?g|ico)$/i, loader: imgFileLoader},
         {test: /\.html$/, loader: 'html'},
-        {test: /\.(otf|eot|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: fontFileLoader},
-        {test: /[\/]angular\.js$/, loader: "exports?angular"}
+        {test: /\.(otf|eot|svg|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: fontFileLoader}
       ],
       postLoaders: [
         {
@@ -51,8 +50,10 @@ module.exports = function (vendorJsFilename, appJsFilename, appCssFilename) {
       ),
       new webpack.DefinePlugin({
         __USE_MOCKS__: process.env.USE_MOCKS,
-        __APP_ENV__: process.env.APP_ENV,
-        angular: 'angular'
+        __APP_ENV__: process.env.APP_ENV
+      }),
+      new webpack.ProvidePlugin({
+        'angular': 'angular'
       })
     ],
     devServer: {

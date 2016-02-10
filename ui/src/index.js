@@ -5,7 +5,7 @@ import './index.scss'; // global css variables and rules for the whole app
 import todoModule from './todo/todo-module';
 
 angular.module('app', [
-  'ngRoute',
+  ngRoute,
   todoModule.name
 ])
   .config(function($routeProvider) {
