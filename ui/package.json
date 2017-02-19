@@ -19,8 +19,8 @@
     "checkStyle": "jscs ./src/*.js --config=./js-styleguide.jscsrc"
   },
   "dependencies": {
-    "angular": "1.4.8",
-    "angular-route": "1.4.8",
+    "angular": "1.6.1",
+    "angular-route": "1.6.1",
     "bootstrap": "^3.3.5",
     "font-awesome": "^4.4.0"
   },
